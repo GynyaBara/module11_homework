@@ -197,24 +197,64 @@ header .navbar ul li a:hover{
 }
 
 .about .row .counter .box{
-    width: 20rem;
-    height: 15rem;
+    width: 25rem;
+    height: 30rem;
     background: #222;
     text-align: center;
     padding: 2rem;
     margin: 2rem;
+    position: relative;
 }
 
 .about .row .counter .box span{
     font-size: 4rem;
     color: var(--yellow);
 }
-
+.percent{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 50px rgb(71, 71, 71);
+    transform: translate(30px, 5px);
+}
 .about .row .counter .box h3{
     font-size: 2rem;
     color: #fff;
 }
 
+.about .row .counter .box svg circle{
+    
+    fill: none;
+    stroke: #191919;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+    z-index: 110;
+}
+svg circle:nth-child(2){
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    
+}
+.text-percent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+}
+.about .row .counter .box:nth-child(2) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440*80) / 100);
+    stroke: #00ff43;
+}
+.about .row .counter .box:nth-child(3) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440*60) / 100);
+    stroke: #0011ff;
+}
+.about .row .counter .box:nth-child(4) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440*20) / 100);
+    stroke: #b3a41f;
+}
 .education .box-container{
     display: flex;
     align-items: center;
